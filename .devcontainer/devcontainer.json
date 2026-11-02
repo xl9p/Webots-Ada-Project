@@ -1,0 +1,33 @@
+{
+  "name": "Webots Project",
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  },
+  "shutdownAction": "stopContainer",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "NVIDIA_DRIVER_CAPABILITIES": "graphics,utility,compute"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "AdaCore.ada",
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "editorConfig.editorConfig",
+        "cschlosser.doxdocgen",
+        "tintinweb.graphviz-interactive-preview"
+      ]
+    }
+  },
+  "runArgs": [
+    "--gpus=all"
+  ],
+  "mounts": [
+    "source=vscode-webots_project-server,target=/root/.vscode-server,type=volume",
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ]
+}

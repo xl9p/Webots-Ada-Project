@@ -1,0 +1,5 @@
+Tested on a wayland linux host with an nvidia GPU, needs nvidia-container-toolkit.
+Nvidia runtime has to be configured with "sudo nvidia-ctk runtime configure --runtime=docker", restart docker afterwards.
+Both $XDG_SESSION_TYPE $DISPLAY have to be configured.
+Also needs xorg-xhost to set the permissions xhost +si:localuser:root.
+Permissions can be revoked xhost -si:localuser:root.

@@ -1,0 +1,17 @@
+name = "example_controller"
+description = "An example webots controller."
+version = "0.1.0-dev"
+
+authors = ["Ivan Shtuka"]
+maintainers = ["Ivan Shtuka <example@example.com>"]
+licenses = "MIT"
+website = ""
+tags = []
+
+executables = ["example_controller"]
+
+[[depends-on]]
+gnatcov = "^26.2.1"
+
+[[depends-on]]
+gnatprove = "^16.1.0"

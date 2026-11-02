@@ -1,0 +1,22 @@
+name = "tests"
+description = "Tests for example controller."
+version = "0.0.0"
+
+authors = ["Ivan Shtuka"]
+maintainers = ["Ivan Shtuka <example@example.com>"]
+licenses = "MIT"
+website = ""
+tags = []
+
+executables = ["tests"]
+
+[[depends-on]]
+aunit = "^26.0.0"
+gnatcov = "^26.2.1"
+example_controller = "~0.1.0"
+
+[[pins]]
+example_controller = { path='..' }
+
+[build-profiles]
+example_controller = "development"
